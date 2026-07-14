@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Logo } from "./components/Logo";
 import halicImage from "./img/halic.jpeg";
+import iletisimImage from "./img/iletisim.webp";
 import disTicaretImage1 from "./img/dis-ticaret/Ekran-Resmi-2026-07-14-10.32.48.webp";
 import disTicaretImage2 from "./img/dis-ticaret/Ekran-Resmi-2026-07-14-10.33.10.webp";
 import disTicaretImage3 from "./img/dis-ticaret/Ekran-Resmi-2026-07-14-10.33.42.webp";
@@ -95,6 +96,9 @@ const navLinks: NavLink[] = [
   { label: "Projeler", href: "/projeler" },
   { label: "Sürdürülebilirlik", href: "/surdurulebilirlik" },
 ];
+
+const contactAddress =
+  "Karadeniz Mahallesi Eski Edirne Asfaltı Caddesi No 408 Venezia AVM J Blok No 102";
 
 const sectors: Sector[] = [
   {
@@ -515,11 +519,7 @@ function SiteFooter() {
 
         <div>
           <h3 className="text-sm tracking-[0.18em] text-navy">İletişim</h3>
-          <ul className="mt-4 space-y-3 text-sm text-navy/64">
-            <li>info@canyascapital.com</li>
-            <li>İstanbul, Türkiye</li>
-            <li>+90 (___) ___ __ __</li>
-          </ul>
+          <p className="mt-4 max-w-xs text-sm leading-7 text-navy/64">{contactAddress}</p>
         </div>
       </div>
       <p className="mx-auto mt-10 max-w-7xl text-xs tracking-[0.14em] text-navy/48">
@@ -581,7 +581,7 @@ function SecondaryHeader() {
 
         <div className="flex items-center gap-3">
           <a
-            href="mailto:info@canyascapital.com"
+            href="/iletisim"
             className="hidden rounded-full bg-navy px-4 py-2.5 text-xs tracking-[0.18em] text-white transition hover:bg-[#13325a] sm:px-5 sm:py-3 sm:text-sm md:inline-flex"
           >
             İletişim
@@ -652,7 +652,7 @@ function SecondaryHeader() {
               )
             ))}
             <a
-              href="mailto:info@canyascapital.com"
+              href="/iletisim"
               onClick={() => setMenuOpen(false)}
               className="inline-flex rounded-full bg-navy px-5 py-3 text-sm tracking-[0.18em] text-white md:hidden"
             >
@@ -925,11 +925,93 @@ export default function App() {
               bizimle doğrudan iletişime geçebilirsiniz.
             </p>
             <a
-              href="mailto:info@canyascapital.com"
+              href="/iletisim"
               className="mt-8 inline-flex rounded-lg bg-white px-6 py-3 text-sm tracking-[0.18em] text-navy"
             >
               İletişime Geç
             </a>
+          </article>
+        </div>
+      </section>
+    </SubpageLayout>
+  ) : pathname === "/iletisim" ? (
+    <SubpageLayout
+      kicker="İletişim"
+      title="Bizimle iletişime geçin"
+      intro="İş birliği, yatırım ve proje süreçleriyle ilgili talepleriniz için formu doldurarak bizimle iletişime geçebilirsiniz."
+    >
+      <section className="bg-[#F8FAFC] px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
+        <div className="mx-auto grid max-w-7xl gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="overflow-hidden rounded-[2rem] border border-cloud bg-white shadow-[0_18px_55px_rgba(10,35,66,0.04)]">
+            <img
+              src={iletisimImage}
+              alt="İletişim görseli"
+              className="h-full min-h-[26rem] w-full object-cover"
+            />
+          </div>
+
+          <article className="rounded-[2rem] border border-cloud bg-white p-8 shadow-[0_18px_55px_rgba(10,35,66,0.04)] sm:p-10">
+            <form className="space-y-5">
+              <div className="grid gap-5 sm:grid-cols-2">
+                <label className="block">
+                  <span className="mb-2 block text-sm tracking-[0.08em] text-navy/60">
+                    Ad Soyad
+                  </span>
+                  <input
+                    type="text"
+                    className="w-full rounded-2xl border border-cloud bg-[#FBFCFD] px-4 py-3 text-navy outline-none transition focus:border-navy/30"
+                  />
+                </label>
+                <label className="block">
+                  <span className="mb-2 block text-sm tracking-[0.08em] text-navy/60">
+                    Telefon
+                  </span>
+                  <input
+                    type="tel"
+                    className="w-full rounded-2xl border border-cloud bg-[#FBFCFD] px-4 py-3 text-navy outline-none transition focus:border-navy/30"
+                  />
+                </label>
+              </div>
+
+              <label className="block">
+                <span className="mb-2 block text-sm tracking-[0.08em] text-navy/60">Mail</span>
+                <input
+                  type="email"
+                  className="w-full rounded-2xl border border-cloud bg-[#FBFCFD] px-4 py-3 text-navy outline-none transition focus:border-navy/30"
+                />
+              </label>
+
+              <label className="block">
+                <span className="mb-2 block text-sm tracking-[0.08em] text-navy/60">Konu</span>
+                <textarea
+                  rows={6}
+                  className="w-full rounded-2xl border border-cloud bg-[#FBFCFD] px-4 py-3 text-navy outline-none transition focus:border-navy/30"
+                />
+              </label>
+
+              <button
+                type="submit"
+                className="inline-flex rounded-full bg-navy px-7 py-3 text-sm tracking-[0.18em] text-white transition hover:bg-[#13325a]"
+              >
+                Gönder
+              </button>
+            </form>
+
+            <div className="mt-8 border-t border-cloud pt-6">
+              <div className="flex items-start gap-4">
+                <span className="inline-flex h-11 w-11 items-center justify-center rounded-full bg-[#25D366]/10 text-[#25D366]">
+                  <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                    <path d="M19.11 4.93A9.9 9.9 0 0 0 12.05 2C6.6 2 2.16 6.42 2.16 11.88c0 1.75.46 3.46 1.34 4.98L2 22l5.3-1.39a9.9 9.9 0 0 0 4.74 1.21h.01c5.45 0 9.89-4.43 9.89-9.89a9.8 9.8 0 0 0-2.83-7ZM12.05 20.15h-.01a8.2 8.2 0 0 1-4.18-1.14l-.3-.18-3.15.83.84-3.07-.2-.31a8.17 8.17 0 0 1-1.27-4.4c0-4.53 3.69-8.22 8.24-8.22 2.2 0 4.27.85 5.83 2.4a8.14 8.14 0 0 1 2.41 5.82c0 4.54-3.7 8.23-8.21 8.23Zm4.5-6.18c-.25-.13-1.48-.73-1.71-.82-.23-.08-.39-.12-.56.13-.16.25-.64.82-.78.98-.14.16-.28.18-.53.06-.25-.12-1.05-.39-1.99-1.25-.73-.65-1.22-1.45-1.36-1.7-.14-.25-.01-.38.11-.5.11-.11.25-.28.37-.41.12-.14.16-.24.25-.4.08-.16.04-.31-.02-.43-.06-.12-.56-1.35-.76-1.85-.2-.47-.4-.41-.56-.42h-.47c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.03 0 1.2.88 2.36 1 2.52.12.16 1.73 2.64 4.19 3.7.58.25 1.04.4 1.39.51.58.18 1.11.15 1.53.09.47-.07 1.48-.6 1.69-1.18.21-.58.21-1.08.15-1.18-.06-.1-.22-.16-.47-.28Z" />
+                  </svg>
+                </span>
+                <div>
+                  <div className="text-sm tracking-[0.16em] text-navy/54">Adres</div>
+                  <p className="mt-2 max-w-lg text-base leading-7 text-navy/72">
+                    {contactAddress}
+                  </p>
+                </div>
+              </div>
+            </div>
           </article>
         </div>
       </section>
@@ -1122,7 +1204,7 @@ export default function App() {
 
             <div className="flex items-center gap-3">
               <a
-                href="mailto:info@canyascapital.com"
+                href="/iletisim"
                 className="hidden rounded-full border border-white/18 bg-white/10 px-4 py-2.5 text-xs tracking-[0.18em] text-white backdrop-blur-xl transition hover:bg-white/16 sm:px-5 sm:py-3 sm:text-sm md:inline-flex"
               >
                 İletişim
@@ -1194,7 +1276,7 @@ export default function App() {
                     )
                   ))}
                   <a
-                    href="mailto:info@canyascapital.com"
+                    href="/iletisim"
                     onClick={() => setMobileMenuOpen(false)}
                     className="inline-flex rounded-full bg-white px-5 py-3 text-sm tracking-[0.18em] text-navy md:hidden"
                   >
@@ -1550,7 +1632,7 @@ export default function App() {
                 </p>
               </div>
               <a
-                href="mailto:info@canyascapital.com"
+                href="/iletisim"
                 className="inline-flex rounded-lg bg-white px-7 py-4 text-sm tracking-[0.18em] text-navy transition hover:bg-cloud"
               >
                 İletişime Geç
