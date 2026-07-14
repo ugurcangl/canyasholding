@@ -92,7 +92,7 @@ const navLinks: NavLink[] = [
   { label: "Anasayfa", href: "/#anasayfa" },
   { label: "Hakkımızda", href: "/hakkımızda" },
   { label: "Sektörler", href: "/#sektorler" },
-  { label: "Projeler", href: "/#projeler" },
+  { label: "Projeler", href: "/projeler" },
   { label: "Sürdürülebilirlik", href: "/surdurulebilirlik" },
 ];
 
