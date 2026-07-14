@@ -1,8 +1,33 @@
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Logo } from "./components/Logo";
 import halicImage from "./img/halic.jpeg";
+import disTicaretImage1 from "./img/dis-ticaret/Ekran-Resmi-2026-07-14-10.32.48.webp";
+import disTicaretImage2 from "./img/dis-ticaret/Ekran-Resmi-2026-07-14-10.33.10.webp";
+import disTicaretImage3 from "./img/dis-ticaret/Ekran-Resmi-2026-07-14-10.33.42.webp";
+import disTicaretImage4 from "./img/dis-ticaret/Ekran-Resmi-2026-07-14-10.34.09.webp";
+import disTicaretImage5 from "./img/dis-ticaret/Ekran-Resmi-2026-07-14-10.34.38.webp";
+import finansImage1 from "./img/finans/finans1.webp";
+import finansImage2 from "./img/finans/finans2.webp";
+import finansImage3 from "./img/finans/finans3.webp";
+import finansImage4 from "./img/finans/finans4.webp";
+import finansImage5 from "./img/finans/finans5.webp";
+import insaatImage1 from "./img/insaat/insaat1.webp";
+import insaatImage2 from "./img/insaat/insaat2.webp";
+import insaatImage3 from "./img/insaat/insaat3.webp";
+import insaatImage4 from "./img/insaat/insaat4.webp";
+import insaatImage5 from "./img/insaat/insaat5.webp";
+import lojistikImage1 from "./img/lojistik/lojistik1.webp";
+import lojistikImage2 from "./img/lojistik/lojistik2.webp";
+import lojistikImage3 from "./img/lojistik/lojistik3.webp";
+import lojistikImage4 from "./img/lojistik/lojistik4.webp";
+import lojistikImage5 from "./img/lojistik/lojistik5.webp";
 import kurumsalImage from "./img/kurumsal.png";
 import surdurulebilirlikImage from "./img/surdurebilirlik.png";
+import enerjiImage1 from "./img/yenilenebilir-enerji/enerji1.webp";
+import enerjiImage2 from "./img/yenilenebilir-enerji/enerji2.webp";
+import enerjiImage3 from "./img/yenilenebilir-enerji/enerji3.webp";
+import enerjiImage4 from "./img/yenilenebilir-enerji/enerji4.webp";
+import enerjiImage5 from "./img/yenilenebilir-enerji/enerji5.webp";
 
 type NavLink = {
   label: string;
@@ -48,6 +73,19 @@ type StatItem = {
 type StrengthItem = {
   title: string;
   description: string;
+};
+
+type GalleryItem = {
+  image: string;
+  alt: string;
+};
+
+type SectorDetail = {
+  title: string;
+  intro: string;
+  paragraphsLeft: string[];
+  paragraphsRight: string[];
+  gallery: GalleryItem[];
 };
 
 const navLinks: NavLink[] = [
@@ -238,6 +276,132 @@ const strengths: StrengthItem[] = [
       "Projelerimizi yalnızca teslim odaklı değil, kalite standardı ve kalıcı kurumsal etki odağında yapılandırıyoruz.",
   },
 ];
+
+const insaatGallery: GalleryItem[] = [
+  {
+    image: insaatImage1,
+    alt: "İnşaat projesi görseli 1",
+  },
+  {
+    image: insaatImage2,
+    alt: "İnşaat projesi görseli 2",
+  },
+  {
+    image: insaatImage3,
+    alt: "İnşaat projesi görseli 3",
+  },
+  {
+    image: insaatImage4,
+    alt: "İnşaat projesi görseli 4",
+  },
+  {
+    image: insaatImage5,
+    alt: "İnşaat projesi görseli 5",
+  },
+];
+
+const enerjiGallery: GalleryItem[] = [
+  { image: enerjiImage1, alt: "Yenilenebilir enerji görseli 1" },
+  { image: enerjiImage2, alt: "Yenilenebilir enerji görseli 2" },
+  { image: enerjiImage3, alt: "Yenilenebilir enerji görseli 3" },
+  { image: enerjiImage4, alt: "Yenilenebilir enerji görseli 4" },
+  { image: enerjiImage5, alt: "Yenilenebilir enerji görseli 5" },
+];
+
+const lojistikGallery: GalleryItem[] = [
+  { image: lojistikImage1, alt: "Lojistik görseli 1" },
+  { image: lojistikImage2, alt: "Lojistik görseli 2" },
+  { image: lojistikImage3, alt: "Lojistik görseli 3" },
+  { image: lojistikImage4, alt: "Lojistik görseli 4" },
+  { image: lojistikImage5, alt: "Lojistik görseli 5" },
+];
+
+const finansGallery: GalleryItem[] = [
+  { image: finansImage1, alt: "Finans operasyonları görseli 1" },
+  { image: finansImage2, alt: "Finans operasyonları görseli 2" },
+  { image: finansImage3, alt: "Finans operasyonları görseli 3" },
+  { image: finansImage4, alt: "Finans operasyonları görseli 4" },
+  { image: finansImage5, alt: "Finans operasyonları görseli 5" },
+];
+
+const disTicaretGallery: GalleryItem[] = [
+  { image: disTicaretImage1, alt: "Dış ticaret görseli 1" },
+  { image: disTicaretImage2, alt: "Dış ticaret görseli 2" },
+  { image: disTicaretImage3, alt: "Dış ticaret görseli 3" },
+  { image: disTicaretImage4, alt: "Dış ticaret görseli 4" },
+  { image: disTicaretImage5, alt: "Dış ticaret görseli 5" },
+];
+
+const sectorDetails: Record<string, SectorDetail> = {
+  "/insaat": {
+    title: "İnşaat",
+    intro:
+      "Canyaz Capital Holding olarak, inşaat sektöründe güven, kalite ve sürdürülebilirlik ilkelerini esas alarak yaşam alanları ve ticari yapılar inşa ediyoruz.",
+    paragraphsLeft: [
+      "Canyaz Capital Holding olarak, inşaat sektöründe güven, kalite ve sürdürülebilirlik ilkelerini esas alarak yaşam alanları ve ticari yapılar inşa ediyoruz. Her projeyi; mühendislik disiplini, yenilikçi yaklaşım ve uzun vadeli değer üretme anlayışıyla ele alıyor, planlama aşamasından anahtar teslimine kadar tüm süreçleri titizlikle yönetiyoruz.",
+      "Faaliyet gösterdiğimiz projelerde modern yapı teknolojilerini, ulusal ve uluslararası kalite standartlarını ve iş sağlığı ile güvenliği prensiplerini ön planda tutuyoruz. Estetik, fonksiyonellik ve dayanıklılığı bir araya getiren çözümler geliştirerek bulunduğumuz bölgelere ekonomik ve sosyal değer katmayı hedefliyoruz.",
+    ],
+    paragraphsRight: [
+      "Güçlü iş ortaklıklarımız, deneyimli teknik kadromuz ve çözüm odaklı çalışma anlayışımızla; konut, ticari yapılar, endüstriyel tesisler, altyapı ve üstyapı projelerinde güvenilir bir çözüm ortağı olmayı amaçlıyoruz.",
+      "Canyaz Capital Holding olarak hedefimiz; kaliteli üretim anlayışımız, sürdürülebilir projelerimiz ve müşteri memnuniyeti odaklı yaklaşımımızla sektörün güvenilir ve tercih edilen markalarından biri olmak, geleceğin şehirlerine değer katacak projeler geliştirmektir.",
+    ],
+    gallery: insaatGallery,
+  },
+  "/yenilenebilir-enerji": {
+    title: "Yenilenebilir Enerji",
+    intro:
+      "Canyaz Capital Holding olarak, sürdürülebilir bir gelecek inşa etmenin en önemli unsurlarından birinin temiz ve yenilenebilir enerji olduğuna inanıyoruz.",
+    paragraphsLeft: [
+      "Canyaz Capital Holding olarak, sürdürülebilir bir gelecek inşa etmenin en önemli unsurlarından birinin temiz ve yenilenebilir enerji olduğuna inanıyoruz. Bu doğrultuda, çevresel sorumluluğu ekonomik değer üretimiyle birleştiren enerji yatırımlarını stratejik büyüme alanlarımız arasında konumlandırıyoruz.",
+      "Güneş, rüzgâr ve diğer yenilenebilir enerji kaynaklarına yönelik projeleri yakından takip ediyor; teknolojik gelişmeleri, verimlilik odaklı çözümleri ve sürdürülebilir yatırım modellerini iş süreçlerimize entegre etmeyi hedefliyoruz. Amacımız, doğal kaynakların etkin kullanımını destekleyen, karbon ayak izini azaltan ve enerji dönüşümüne katkı sağlayan projeler geliştirmektir.",
+    ],
+    paragraphsRight: [
+      "Enerji sektöründeki faaliyetlerimizi; kalite, güvenlik, çevreye duyarlılık ve uzun vadeli sürdürülebilirlik ilkeleri doğrultusunda şekillendiriyor, kamu ve özel sektör iş birlikleriyle katma değer üreten çözümler sunmayı amaçlıyoruz.",
+      "Canyaz Capital Holding, yenilenebilir enerji alanındaki yatırımlarıyla yalnızca bugünün ihtiyaçlarına değil, gelecek nesillerin yaşam kalitesine de katkı sağlamayı hedeflemektedir. İnovasyon odaklı yaklaşımımız ve güçlü vizyonumuzla, temiz enerji ekosisteminin güvenilir ve sürdürülebilir paydaşlarından biri olma yolunda kararlılıkla ilerliyoruz.",
+    ],
+    gallery: enerjiGallery,
+  },
+  "/lojistik": {
+    title: "Lojistik",
+    intro:
+      "Canyaz Capital Holding olarak, lojistiği yalnızca bir taşıma süreci değil; tedarik zincirinin verimliliğini artıran, ticareti güçlendiren ve sürdürülebilir büyümeyi destekleyen stratejik bir hizmet alanı olarak görüyoruz.",
+    paragraphsLeft: [
+      "Canyaz Capital Holding olarak, lojistiği yalnızca bir taşıma süreci değil; tedarik zincirinin verimliliğini artıran, ticareti güçlendiren ve sürdürülebilir büyümeyi destekleyen stratejik bir hizmet alanı olarak görüyoruz.",
+      "Kara, deniz, hava ve demiryolu taşımacılığına yönelik çözümler geliştirerek, yurt içi ve uluslararası lojistik süreçlerinin güvenilir, hızlı ve etkin şekilde yönetilmesini hedefliyoruz. Operasyonlarımızda zamanında teslimat, operasyonel mükemmeliyet ve müşteri memnuniyetini temel önceliklerimiz arasında konumlandırıyoruz.",
+    ],
+    paragraphsRight: [
+      "Teknoloji destekli operasyon yönetimi, güçlü iş ortaklıkları ve dinamik organizasyon yapımız sayesinde değişen pazar koşullarına hızlı uyum sağlayan, esnek ve sürdürülebilir lojistik çözümleri sunmayı amaçlıyoruz. Her aşamada şeffaflık, kalite ve güven ilkeleri doğrultusunda hareket ederek müşterilerimizin tedarik zinciri süreçlerine değer katıyoruz.",
+      "Canyaz Capital Holding olarak hedefimiz; yenilikçi lojistik anlayışımız, güçlü operasyon kabiliyetimiz ve sürdürülebilir hizmet yaklaşımımızla ulusal ve uluslararası pazarlarda güvenilir bir iş ortağı olmak, ticaretin kesintisiz ve verimli şekilde ilerlemesine katkı sağlamaktır.",
+    ],
+    gallery: lojistikGallery,
+  },
+  "/finans-operasyonlari": {
+    title: "Finans Operasyonları",
+    intro:
+      "Canyaz Capital Holding olarak, finansal sürdürülebilirliği ve etkin kaynak yönetimini kurumsal büyümenin temel unsurlarından biri olarak görüyoruz.",
+    paragraphsLeft: [
+      "Canyaz Capital Holding olarak, finansal sürdürülebilirliği ve etkin kaynak yönetimini kurumsal büyümenin temel unsurlarından biri olarak görüyoruz. Güçlü finansal planlama anlayışımız ve disiplinli operasyon süreçlerimizle, faaliyet gösterdiğimiz tüm sektörlerde verimli, şeffaf ve sürdürülebilir finansal yapılar oluşturmayı hedefliyoruz.",
+      "Finans operasyonlarımız; bütçe yönetimi, nakit akışı planlaması, mali analiz, risk yönetimi ve yatırım süreçlerinin koordinasyonunu kapsayan bütüncül bir yaklaşımla yürütülmektedir. Stratejik karar alma süreçlerini destekleyen veri odaklı analizler ve güçlü finansal kontrol mekanizmaları sayesinde operasyonel verimliliği artırmayı amaçlıyoruz.",
+    ],
+    paragraphsRight: [
+      "Kurumsal yönetim ilkelerine bağlı, hesap verebilir ve sürdürülebilir bir finans anlayışıyla hareket ederek, iş ortaklarımız ve paydaşlarımız için uzun vadeli değer üretmeye devam ediyoruz. Değişen ekonomik koşullara uyum sağlayan esnek finansal yapımız ve geleceğe yönelik vizyonumuzla, istikrarlı büyümeyi destekleyen güçlü bir finansal altyapı oluşturuyoruz.",
+    ],
+    gallery: finansGallery,
+  },
+  "/dis-ticaret": {
+    title: "Dış Ticaret",
+    intro:
+      "Canyaz Capital Holding olarak, küresel ticaretin sunduğu fırsatları değerlendirerek uluslararası pazarlarda sürdürülebilir iş birlikleri geliştirmeyi ve ekonomik değer üretmeyi hedefliyoruz.",
+    paragraphsLeft: [
+      "Canyaz Capital Holding olarak, küresel ticaretin sunduğu fırsatları değerlendirerek uluslararası pazarlarda sürdürülebilir iş birlikleri geliştirmeyi ve ekonomik değer üretmeyi hedefliyoruz. Dış ticaret faaliyetlerimizi; güven, kalite ve karşılıklı fayda ilkeleri doğrultusunda yöneterek uluslararası iş dünyasında güçlü ve kalıcı ilişkiler kurmayı amaçlıyoruz.",
+      "İhracat ve ithalat süreçlerini uluslararası ticaret standartlarına uygun şekilde planlıyor; tedarik zinciri yönetimi, gümrük süreçleri, lojistik koordinasyonu ve operasyonel planlamayı etkin bir anlayışla yürütüyoruz. Değişen küresel pazar dinamiklerini yakından takip ederek iş ortaklarımıza rekabet avantajı sağlayan çözümler sunmaya odaklanıyoruz.",
+    ],
+    paragraphsRight: [
+      "Güçlü iş ağı, profesyonel yaklaşımı ve çözüm odaklı hizmet anlayışıyla farklı sektörlerde güvenilir ticaret süreçleri geliştirmeyi hedefleyen Canyaz Capital Holding, uluslararası pazarlarda sürdürülebilir büyümeyi destekleyen stratejik projeler üretmeye devam etmektedir. Amacımız; ülkemizin küresel ticaretteki rekabet gücüne katkı sağlayan, uzun vadeli ve güvene dayalı iş ortaklıkları oluşturmaktır.",
+    ],
+    gallery: disTicaretGallery,
+  },
+};
 
 function getCurrentPathname() {
   if (typeof window === "undefined") {
@@ -506,23 +670,31 @@ function SubpageLayout({
   title,
   intro,
   children,
+  dark = false,
 }: {
   kicker: string;
   title: string;
   intro: string;
   children: ReactNode;
+  dark?: boolean;
 }) {
   return (
-    <div className="min-h-screen bg-white text-navy antialiased">
+    <div className={`min-h-screen antialiased ${dark ? "bg-[#071426] text-white" : "bg-white text-navy"}`}>
       <SecondaryHeader />
       <main>
-        <section className="bg-white px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+        <section
+          className={`px-4 py-16 sm:px-6 lg:px-8 lg:py-20 ${
+            dark ? "bg-[#071426]" : "bg-white"
+          }`}
+        >
           <div className="mx-auto max-w-7xl">
-            <p className="section-kicker">{kicker}</p>
+            <p className={`section-kicker ${dark ? "text-white/55" : ""}`}>{kicker}</p>
             <h1 className="mt-5 max-w-4xl text-4xl font-light tracking-[-0.04em] sm:text-5xl lg:text-6xl">
               {title}
             </h1>
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-navy/68">{intro}</p>
+            <p className={`mt-6 max-w-3xl text-lg leading-8 ${dark ? "text-white/68" : "text-navy/68"}`}>
+              {intro}
+            </p>
           </div>
         </section>
         {children}
@@ -667,9 +839,66 @@ export default function App() {
 
   const currentSlide = heroSlides[activeSlide];
   const currentSector = sectors.find((sector) => sector.path === pathname);
+  const currentSectorDetail = sectorDetails[pathname];
   const isHomePage = pathname === "/";
 
-  const subpageContent = currentSector ? (
+  const subpageContent = currentSectorDetail ? (
+    <SubpageLayout
+      kicker="Sektör"
+      title={currentSectorDetail.title}
+      intro={currentSectorDetail.intro}
+    >
+      <section className="px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
+        <div className="mx-auto max-w-7xl overflow-hidden rounded-[2.3rem] shadow-[0_28px_90px_rgba(10,35,66,0.12)]">
+          <div className="grid lg:grid-cols-2">
+            <article className="bg-navy p-8 text-white sm:p-10 lg:p-12">
+              {currentSectorDetail.paragraphsLeft.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={`${index === 0 ? "" : "mt-6"} max-w-xl text-lg leading-8 text-white`}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </article>
+
+            <article className="bg-white p-8 sm:p-10 lg:p-12">
+              {currentSectorDetail.paragraphsRight.map((paragraph, index) => (
+                <p
+                  key={index}
+                  className={`${index === 0 ? "" : "mt-6"} max-w-xl text-lg leading-8 text-navy/78`}
+                >
+                  {paragraph}
+                </p>
+              ))}
+            </article>
+          </div>
+        </div>
+
+        <div className="mx-auto mt-10 grid max-w-7xl gap-4 lg:grid-cols-2">
+          <div className="insaat-gallery-card insaat-gallery-card--hero rounded-[1.5rem]">
+            <img
+              src={currentSectorDetail.gallery[0].image}
+              alt={currentSectorDetail.gallery[0].alt}
+              className="insaat-gallery-image h-full w-full transition duration-700"
+            />
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2">
+            {currentSectorDetail.gallery.slice(1).map((item) => (
+              <div key={item.alt} className="insaat-gallery-card rounded-[1.35rem]">
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  className="insaat-gallery-image h-full w-full transition duration-700"
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </SubpageLayout>
+  ) : currentSector ? (
     <SubpageLayout
       kicker="Sektör"
       title={currentSector.title}
