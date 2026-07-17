@@ -12,6 +12,7 @@ import finansImage2 from "./img/finans/finans2.webp";
 import finansImage3 from "./img/finans/finans3.webp";
 import finansImage4 from "./img/finans/finans4.webp";
 import finansImage5 from "./img/finans/finans5.webp";
+import hakkimizdaImage from "./img/hakkimizda.webp";
 import insaatImage1 from "./img/insaat/insaat1.webp";
 import insaatImage2 from "./img/insaat/insaat2.webp";
 import insaatImage3 from "./img/insaat/insaat3.webp";
@@ -671,28 +672,57 @@ function SubpageLayout({
   intro,
   children,
   dark = false,
+  heroImage,
+  centerHero = false,
 }: {
   kicker: string;
   title: string;
   intro: string;
   children: ReactNode;
   dark?: boolean;
+  heroImage?: string;
+  centerHero?: boolean;
 }) {
   return (
     <div className={`min-h-screen antialiased ${dark ? "bg-[#071426] text-white" : "bg-white text-navy"}`}>
       <SecondaryHeader />
       <main>
         <section
-          className={`px-4 py-16 sm:px-6 lg:px-8 lg:py-20 ${
+          className={`relative overflow-hidden px-4 py-16 sm:px-6 lg:px-8 lg:py-20 ${
             dark ? "bg-[#071426]" : "bg-white"
           }`}
         >
-          <div className="mx-auto max-w-7xl">
-            <p className={`section-kicker ${dark ? "text-white/55" : ""}`}>{kicker}</p>
-            <h1 className="mt-5 max-w-4xl text-4xl font-light tracking-[-0.04em] sm:text-5xl lg:text-6xl">
+          {heroImage ? (
+            <>
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${heroImage})` }}
+                aria-hidden="true"
+              />
+              <div
+                className={`absolute inset-0 ${
+                  dark
+                    ? "bg-[linear-gradient(180deg,rgba(7,20,38,0.72)_0%,rgba(7,20,38,0.8)_100%)]"
+                    : "bg-[linear-gradient(180deg,rgba(7,20,38,0.5)_0%,rgba(7,20,38,0.66)_100%)]"
+                }`}
+                aria-hidden="true"
+              />
+            </>
+          ) : null}
+          <div className={`relative mx-auto max-w-7xl ${centerHero ? "text-center" : ""}`}>
+            <p className={`section-kicker ${dark || heroImage ? "text-white/55" : ""}`}>{kicker}</p>
+            <h1
+              className={`mt-5 text-4xl font-light tracking-[-0.04em] sm:text-5xl lg:text-6xl ${
+                centerHero ? "mx-auto max-w-5xl" : "max-w-4xl"
+              } ${heroImage ? "text-white" : ""}`}
+            >
               {title}
             </h1>
-            <p className={`mt-6 max-w-3xl text-lg leading-8 ${dark ? "text-white/68" : "text-navy/68"}`}>
+            <p
+              className={`mt-6 text-base leading-7 sm:text-lg sm:leading-8 ${
+                centerHero ? "mx-auto max-w-4xl" : "max-w-3xl"
+              } ${dark || heroImage ? "font-semibold text-white" : "text-navy/68"}`}
+            >
               {intro}
             </p>
           </div>
@@ -1019,17 +1049,47 @@ export default function App() {
   ) : pathname === "/hakkımızda" ? (
     <SubpageLayout
       kicker="Hakkımızda"
-      title="Kurumsal vizyonumuzu uzun vadeli değer üretimiyle büyütüyoruz"
-      intro="Canyas Capital Holding; inşaat, yenilenebilir enerji, lojistik, finans operasyonları ve dış ticaret alanlarını aynı stratejik yapı altında bir araya getirir."
+      title="Yarım Asırlık Tecrübe, Stratejik Vizyon ve Sarsılmaz Güven"
+      intro="Yarım asra yaklaşan köklü tecrübe ve stratejik birikimin eseri olarak kurulan şirketimiz; iş dünyasında güvenin, yenilikçi vizyonun ve sürdürülebilir büyümenin temsilcisidir."
+      heroImage={hakkimizdaImage}
+      centerHero
     >
-      <section className="bg-white px-4 pb-20 sm:px-6 lg:px-8 lg:pb-28">
-        <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-2">
-          {strengths.map((item) => (
-            <article key={item.title} className="rounded-[1.8rem] border border-cloud bg-[#FBFCFD] p-8">
-              <h2 className="text-2xl font-light tracking-[-0.03em] text-navy">{item.title}</h2>
-              <p className="mt-4 text-base leading-7 text-navy/68">{item.description}</p>
-            </article>
-          ))}
+      <section className="bg-white px-4 pt-10 pb-20 sm:px-6 sm:pt-12 lg:px-8 lg:pt-16 lg:pb-28">
+        <div className="mx-auto max-w-5xl space-y-6">
+          <p className="text-lg leading-8 text-navy/72">
+            Muhataplarımız için yalnızca bir yatırım veya yönetim merkezi değil; birlikte
+            girişilen her yolda güvenli, rasyonel ve sağlam adımlar atan kararlı bir{" "}
+            <span className="rounded-md bg-[#DCE8F6] px-2 py-1 font-medium text-navy">
+              "yol arkadaşı"
+            </span>{" "}
+            olma misyonunu taşıyoruz.
+          </p>
+          <p className="text-lg leading-8 text-navy/72">
+            Temellerimizde; kurumsal yönetim, uluslararası ticaret, operasyonel verimlilik,
+            fikri mülkiyet ve{" "}
+            <span className="rounded-md bg-[#DCE8F6] px-2 py-1 font-medium text-navy">
+              stratejik risk yönetimi
+            </span>{" "}
+            alanlarında elde ettiğimiz derin uzmanlık yatmaktadır.
+          </p>
+          <p className="text-lg leading-8 text-navy/72">
+            Dinamik küresel ekonomi koşullarında riskleri erkenden teşhis eden analitik
+            yaklaşımımızla; paydaşlarımıza sadece bugünü kurtaran değil,{" "}
+            <span className="rounded-md bg-[#DCE8F6] px-2 py-1 font-medium text-navy">
+              geleceği güvence altına alan kalıcı çözümler
+            </span>{" "}
+            sunuyoruz. Sürdürülebilir başarının yalnızca sermaye veya hukuki güvenceyle değil;
+            ancak vizyon, yüksek disiplin ve stratejik bütünlükle inşa edilebileceğine
+            inanıyoruz.
+          </p>
+          <p className="text-lg leading-8 text-navy/72">
+            Bu sarsılmaz prensiple;{" "}
+            <span className="rounded-md bg-[#DCE8F6] px-2 py-1 font-medium text-navy">
+              hedeflerinizi gerçeğe dönüştürmek
+            </span>
+            , krizleri fırsata çevirmek ve geleceği en sağlam temeller üzerinde birlikte inşa
+            etmek için daima yanınızdayız.
+          </p>
         </div>
       </section>
     </SubpageLayout>
