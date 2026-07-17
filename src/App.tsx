@@ -98,7 +98,7 @@ const navLinks: NavLink[] = [
 ];
 
 const contactAddress =
-  "Karadeniz Mahallesi Eski Edirne Asfaltı Caddesi No 408 Venezia AVM J Blok No 102";
+  "Karadeniz Mahallesi Eski Edirne Asfaltı Caddesi No 408 Venezia AVM J Blok No 102 Gaziosmanpaşa / İstanbul";
 
 const sectors: Sector[] = [
   {
@@ -340,51 +340,51 @@ const sectorDetails: Record<string, SectorDetail> = {
   "/insaat": {
     title: "İnşaat",
     intro:
-      "Canyaz Capital Holding olarak, inşaat sektöründe güven, kalite ve sürdürülebilirlik ilkelerini esas alarak yaşam alanları ve ticari yapılar inşa ediyoruz.",
+      "Canyas Capital Holding olarak, inşaat sektöründe güven, kalite ve sürdürülebilirlik ilkelerini esas alarak yaşam alanları ve ticari yapılar inşa ediyoruz.",
     paragraphsLeft: [
-      "Canyaz Capital Holding olarak, inşaat sektöründe güven, kalite ve sürdürülebilirlik ilkelerini esas alarak yaşam alanları ve ticari yapılar inşa ediyoruz. Her projeyi; mühendislik disiplini, yenilikçi yaklaşım ve uzun vadeli değer üretme anlayışıyla ele alıyor, planlama aşamasından anahtar teslimine kadar tüm süreçleri titizlikle yönetiyoruz.",
+      "Canyas Capital Holding olarak, inşaat sektöründe güven, kalite ve sürdürülebilirlik ilkelerini esas alarak yaşam alanları ve ticari yapılar inşa ediyoruz. Her projeyi; mühendislik disiplini, yenilikçi yaklaşım ve uzun vadeli değer üretme anlayışıyla ele alıyor, planlama aşamasından anahtar teslimine kadar tüm süreçleri titizlikle yönetiyoruz.",
       "Faaliyet gösterdiğimiz projelerde modern yapı teknolojilerini, ulusal ve uluslararası kalite standartlarını ve iş sağlığı ile güvenliği prensiplerini ön planda tutuyoruz. Estetik, fonksiyonellik ve dayanıklılığı bir araya getiren çözümler geliştirerek bulunduğumuz bölgelere ekonomik ve sosyal değer katmayı hedefliyoruz.",
     ],
     paragraphsRight: [
       "Güçlü iş ortaklıklarımız, deneyimli teknik kadromuz ve çözüm odaklı çalışma anlayışımızla; konut, ticari yapılar, endüstriyel tesisler, altyapı ve üstyapı projelerinde güvenilir bir çözüm ortağı olmayı amaçlıyoruz.",
-      "Canyaz Capital Holding olarak hedefimiz; kaliteli üretim anlayışımız, sürdürülebilir projelerimiz ve müşteri memnuniyeti odaklı yaklaşımımızla sektörün güvenilir ve tercih edilen markalarından biri olmak, geleceğin şehirlerine değer katacak projeler geliştirmektir.",
+      "Canyas Capital Holding olarak hedefimiz; kaliteli üretim anlayışımız, sürdürülebilir projelerimiz ve müşteri memnuniyeti odaklı yaklaşımımızla sektörün güvenilir ve tercih edilen markalarından biri olmak, geleceğin şehirlerine değer katacak projeler geliştirmektir.",
     ],
     gallery: insaatGallery,
   },
   "/yenilenebilir-enerji": {
     title: "Yenilenebilir Enerji",
     intro:
-      "Canyaz Capital Holding olarak, sürdürülebilir bir gelecek inşa etmenin en önemli unsurlarından birinin temiz ve yenilenebilir enerji olduğuna inanıyoruz.",
+      "Canyas Capital Holding olarak, sürdürülebilir bir gelecek inşa etmenin en önemli unsurlarından birinin temiz ve yenilenebilir enerji olduğuna inanıyoruz.",
     paragraphsLeft: [
-      "Canyaz Capital Holding olarak, sürdürülebilir bir gelecek inşa etmenin en önemli unsurlarından birinin temiz ve yenilenebilir enerji olduğuna inanıyoruz. Bu doğrultuda, çevresel sorumluluğu ekonomik değer üretimiyle birleştiren enerji yatırımlarını stratejik büyüme alanlarımız arasında konumlandırıyoruz.",
+      "Canyas Capital Holding olarak, sürdürülebilir bir gelecek inşa etmenin en önemli unsurlarından birinin temiz ve yenilenebilir enerji olduğuna inanıyoruz. Bu doğrultuda, çevresel sorumluluğu ekonomik değer üretimiyle birleştiren enerji yatırımlarını stratejik büyüme alanlarımız arasında konumlandırıyoruz.",
       "Güneş, rüzgâr ve diğer yenilenebilir enerji kaynaklarına yönelik projeleri yakından takip ediyor; teknolojik gelişmeleri, verimlilik odaklı çözümleri ve sürdürülebilir yatırım modellerini iş süreçlerimize entegre etmeyi hedefliyoruz. Amacımız, doğal kaynakların etkin kullanımını destekleyen, karbon ayak izini azaltan ve enerji dönüşümüne katkı sağlayan projeler geliştirmektir.",
     ],
     paragraphsRight: [
       "Enerji sektöründeki faaliyetlerimizi; kalite, güvenlik, çevreye duyarlılık ve uzun vadeli sürdürülebilirlik ilkeleri doğrultusunda şekillendiriyor, kamu ve özel sektör iş birlikleriyle katma değer üreten çözümler sunmayı amaçlıyoruz.",
-      "Canyaz Capital Holding, yenilenebilir enerji alanındaki yatırımlarıyla yalnızca bugünün ihtiyaçlarına değil, gelecek nesillerin yaşam kalitesine de katkı sağlamayı hedeflemektedir. İnovasyon odaklı yaklaşımımız ve güçlü vizyonumuzla, temiz enerji ekosisteminin güvenilir ve sürdürülebilir paydaşlarından biri olma yolunda kararlılıkla ilerliyoruz.",
+      "Canyas Capital Holding, yenilenebilir enerji alanındaki yatırımlarıyla yalnızca bugünün ihtiyaçlarına değil, gelecek nesillerin yaşam kalitesine de katkı sağlamayı hedeflemektedir. İnovasyon odaklı yaklaşımımız ve güçlü vizyonumuzla, temiz enerji ekosisteminin güvenilir ve sürdürülebilir paydaşlarından biri olma yolunda kararlılıkla ilerliyoruz.",
     ],
     gallery: enerjiGallery,
   },
   "/lojistik": {
     title: "Lojistik",
     intro:
-      "Canyaz Capital Holding olarak, lojistiği yalnızca bir taşıma süreci değil; tedarik zincirinin verimliliğini artıran, ticareti güçlendiren ve sürdürülebilir büyümeyi destekleyen stratejik bir hizmet alanı olarak görüyoruz.",
+      "Canyas Capital Holding olarak, lojistiği yalnızca bir taşıma süreci değil; tedarik zincirinin verimliliğini artıran, ticareti güçlendiren ve sürdürülebilir büyümeyi destekleyen stratejik bir hizmet alanı olarak görüyoruz.",
     paragraphsLeft: [
-      "Canyaz Capital Holding olarak, lojistiği yalnızca bir taşıma süreci değil; tedarik zincirinin verimliliğini artıran, ticareti güçlendiren ve sürdürülebilir büyümeyi destekleyen stratejik bir hizmet alanı olarak görüyoruz.",
+      "Canyas Capital Holding olarak, lojistiği yalnızca bir taşıma süreci değil; tedarik zincirinin verimliliğini artıran, ticareti güçlendiren ve sürdürülebilir büyümeyi destekleyen stratejik bir hizmet alanı olarak görüyoruz.",
       "Kara, deniz, hava ve demiryolu taşımacılığına yönelik çözümler geliştirerek, yurt içi ve uluslararası lojistik süreçlerinin güvenilir, hızlı ve etkin şekilde yönetilmesini hedefliyoruz. Operasyonlarımızda zamanında teslimat, operasyonel mükemmeliyet ve müşteri memnuniyetini temel önceliklerimiz arasında konumlandırıyoruz.",
     ],
     paragraphsRight: [
       "Teknoloji destekli operasyon yönetimi, güçlü iş ortaklıkları ve dinamik organizasyon yapımız sayesinde değişen pazar koşullarına hızlı uyum sağlayan, esnek ve sürdürülebilir lojistik çözümleri sunmayı amaçlıyoruz. Her aşamada şeffaflık, kalite ve güven ilkeleri doğrultusunda hareket ederek müşterilerimizin tedarik zinciri süreçlerine değer katıyoruz.",
-      "Canyaz Capital Holding olarak hedefimiz; yenilikçi lojistik anlayışımız, güçlü operasyon kabiliyetimiz ve sürdürülebilir hizmet yaklaşımımızla ulusal ve uluslararası pazarlarda güvenilir bir iş ortağı olmak, ticaretin kesintisiz ve verimli şekilde ilerlemesine katkı sağlamaktır.",
+      "Canyas Capital Holding olarak hedefimiz; yenilikçi lojistik anlayışımız, güçlü operasyon kabiliyetimiz ve sürdürülebilir hizmet yaklaşımımızla ulusal ve uluslararası pazarlarda güvenilir bir iş ortağı olmak, ticaretin kesintisiz ve verimli şekilde ilerlemesine katkı sağlamaktır.",
     ],
     gallery: lojistikGallery,
   },
   "/finans-operasyonlari": {
     title: "Finans Operasyonları",
     intro:
-      "Canyaz Capital Holding olarak, finansal sürdürülebilirliği ve etkin kaynak yönetimini kurumsal büyümenin temel unsurlarından biri olarak görüyoruz.",
+      "Canyas Capital Holding olarak, finansal sürdürülebilirliği ve etkin kaynak yönetimini kurumsal büyümenin temel unsurlarından biri olarak görüyoruz.",
     paragraphsLeft: [
-      "Canyaz Capital Holding olarak, finansal sürdürülebilirliği ve etkin kaynak yönetimini kurumsal büyümenin temel unsurlarından biri olarak görüyoruz. Güçlü finansal planlama anlayışımız ve disiplinli operasyon süreçlerimizle, faaliyet gösterdiğimiz tüm sektörlerde verimli, şeffaf ve sürdürülebilir finansal yapılar oluşturmayı hedefliyoruz.",
+      "Canyas Capital Holding olarak, finansal sürdürülebilirliği ve etkin kaynak yönetimini kurumsal büyümenin temel unsurlarından biri olarak görüyoruz. Güçlü finansal planlama anlayışımız ve disiplinli operasyon süreçlerimizle, faaliyet gösterdiğimiz tüm sektörlerde verimli, şeffaf ve sürdürülebilir finansal yapılar oluşturmayı hedefliyoruz.",
       "Finans operasyonlarımız; bütçe yönetimi, nakit akışı planlaması, mali analiz, risk yönetimi ve yatırım süreçlerinin koordinasyonunu kapsayan bütüncül bir yaklaşımla yürütülmektedir. Stratejik karar alma süreçlerini destekleyen veri odaklı analizler ve güçlü finansal kontrol mekanizmaları sayesinde operasyonel verimliliği artırmayı amaçlıyoruz.",
     ],
     paragraphsRight: [
@@ -395,13 +395,13 @@ const sectorDetails: Record<string, SectorDetail> = {
   "/dis-ticaret": {
     title: "Dış Ticaret",
     intro:
-      "Canyaz Capital Holding olarak, küresel ticaretin sunduğu fırsatları değerlendirerek uluslararası pazarlarda sürdürülebilir iş birlikleri geliştirmeyi ve ekonomik değer üretmeyi hedefliyoruz.",
+      "Canyas Capital Holding olarak, küresel ticaretin sunduğu fırsatları değerlendirerek uluslararası pazarlarda sürdürülebilir iş birlikleri geliştirmeyi ve ekonomik değer üretmeyi hedefliyoruz.",
     paragraphsLeft: [
-      "Canyaz Capital Holding olarak, küresel ticaretin sunduğu fırsatları değerlendirerek uluslararası pazarlarda sürdürülebilir iş birlikleri geliştirmeyi ve ekonomik değer üretmeyi hedefliyoruz. Dış ticaret faaliyetlerimizi; güven, kalite ve karşılıklı fayda ilkeleri doğrultusunda yöneterek uluslararası iş dünyasında güçlü ve kalıcı ilişkiler kurmayı amaçlıyoruz.",
+      "Canyas Capital Holding olarak, küresel ticaretin sunduğu fırsatları değerlendirerek uluslararası pazarlarda sürdürülebilir iş birlikleri geliştirmeyi ve ekonomik değer üretmeyi hedefliyoruz. Dış ticaret faaliyetlerimizi; güven, kalite ve karşılıklı fayda ilkeleri doğrultusunda yöneterek uluslararası iş dünyasında güçlü ve kalıcı ilişkiler kurmayı amaçlıyoruz.",
       "İhracat ve ithalat süreçlerini uluslararası ticaret standartlarına uygun şekilde planlıyor; tedarik zinciri yönetimi, gümrük süreçleri, lojistik koordinasyonu ve operasyonel planlamayı etkin bir anlayışla yürütüyoruz. Değişen küresel pazar dinamiklerini yakından takip ederek iş ortaklarımıza rekabet avantajı sağlayan çözümler sunmaya odaklanıyoruz.",
     ],
     paragraphsRight: [
-      "Güçlü iş ağı, profesyonel yaklaşımı ve çözüm odaklı hizmet anlayışıyla farklı sektörlerde güvenilir ticaret süreçleri geliştirmeyi hedefleyen Canyaz Capital Holding, uluslararası pazarlarda sürdürülebilir büyümeyi destekleyen stratejik projeler üretmeye devam etmektedir. Amacımız; ülkemizin küresel ticaretteki rekabet gücüne katkı sağlayan, uzun vadeli ve güvene dayalı iş ortaklıkları oluşturmaktır.",
+      "Güçlü iş ağı, profesyonel yaklaşımı ve çözüm odaklı hizmet anlayışıyla farklı sektörlerde güvenilir ticaret süreçleri geliştirmeyi hedefleyen Canyas Capital Holding, uluslararası pazarlarda sürdürülebilir büyümeyi destekleyen stratejik projeler üretmeye devam etmektedir. Amacımız; ülkemizin küresel ticaretteki rekabet gücüne katkı sağlayan, uzun vadeli ve güvene dayalı iş ortaklıkları oluşturmaktır.",
     ],
     gallery: disTicaretGallery,
   },
