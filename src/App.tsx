@@ -1350,7 +1350,7 @@ export default function App() {
           <div className="relative z-10 mx-auto flex min-h-0 flex-1 max-w-7xl items-center px-4 pb-6 pt-4 sm:px-6 sm:pb-10 sm:pt-6 lg:px-8 lg:pb-12">
             <div className="grid w-full gap-6 lg:grid-cols-[minmax(0,1fr)_18rem] lg:items-end lg:gap-10">
               <div data-reveal className="reveal max-w-4xl">
-                <h1 className="-ml-[0.045em] min-h-[2.75em] max-w-5xl text-[2.35rem] font-light leading-[0.88] tracking-[-0.065em] sm:min-h-[2.8em] sm:text-5xl md:text-6xl lg:min-h-[2.7em] lg:text-[5.6rem]">
+                <h1 className="-ml-[0.02em] min-h-[2.75em] max-w-5xl text-[clamp(1.65rem,5vw,2.7rem)] font-light leading-[0.92] tracking-[-0.05em] sm:min-h-[2.8em] md:text-[clamp(2.15rem,4.8vw,3.7rem)] lg:min-h-[2.7em] lg:text-[clamp(2.85rem,4.6vw,4.2rem)]">
                   {currentSlide.title.map((line) => (
                     <span key={line} className="hero-line">
                       {line}
